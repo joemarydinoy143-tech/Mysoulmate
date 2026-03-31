@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To The Most Special Person Of My Life</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #ffe0b2);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #d81b60;
+  }
+
+  .intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  /* Short Messages Section */
+  .messages-section {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+  }
+
+  .messages-section h2 {
+    text-align: center;
+    color: #d81b60;
+    margin-bottom: 20px;
+  }
+
+  .messages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .message {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1em;
+    max-width: 200px;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  .message:hover {
+    background: #f8bbd0;
+  }
+
+  /* Gallery styles */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .caption {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 1em;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>"To the One Who Is My Everything"</h1>
+  <div class="intro">
+    I find myself in you.
+And I find you in everything I do,
+everything I see, and everything I hope for.
+
+But most of all, I find peace in you,
+because I have never had to doubt
+that we were meant to be.
+
+Thank you for choosing me to walk and run this life beside you.
+  </div>
+</header>
+
+<!-- Short Messages Section -->
+<div class="messages-section">
+  <h2>Found in You</h2>
+  <div class="messages" id="messages">
+    <!-- Messages will be inserted here -->
+  </div>
+</div>
+
+<div class="gallery" id="gallery">
+  <!-- Pictures will go here -->
+</div>
+
+<!-- Your existing content, e.g., images or slides -->
+
+<!-- End page / outro section -->
+<div id="outro" style="text-align:center; margin-top:50px;">
+  <h2>To My Love, My Home, My Everything!</h2>
+  <p>"Being with you is a gift I’ll never take for granted. I look forward to a lifetime of more firsts, more laughter, and more beautiful miles together"</p>
+</div>
+
+<footer>
+  Made with ❤️ by: riri
+</footer>
+
+<script>
+  // Array of picture URLs and captions
+  const pictures = [
+    { src: 'C:\\Users\\Lenovo\\Downloads\\myangel\\myimage1.jpeg', caption: 'That first sizzle of us' },
+    { src: 'C:\\Users\\Lenovo\\Downloads\\myangel\\myimage2.jpeg', caption: 'The way you hold my heart' },
+    { src: 'C:\\Users\\Lenovo\\Downloads\\myangel\\myimage3.jpeg', caption: 'The softest parts of our story' },
+    { src: 'C:\\Users\\Lenovo\\Downloads\\myangel\\myimage4.jpeg', caption: 'The rhythm of us' },
+    { src: 'C:\\Users\\Lenovo\\Downloads\\myangel\\myangel1.JPG', caption: 'My Soulmate' },
+    { src: 'C:\\Users\\Lenovo\\Downloads\\myangel\\myangel2.JPG', caption: 'My Heart’s Keeper' }
+
+  ];
+
+  const messages = [
+    "You are my sunshine!",
+    "Forever grateful for you.",
+    "You make every day special.",
+    "Love you endlessly.",
+    "My heart beats for you.",
+    "You're my everything.",
+    "Can't imagine life without you.",
+    "Thank you for being amazing!"
+  ];
+
+  // Populate gallery
+  const gallery = document.getElementById('gallery');
+  pictures.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const img = document.createElement('img');
+    img.src = p.src;
+    img.alt = p.caption;
+
+    const caption = document.createElement('div');
+    caption.className = 'caption';
+    caption.innerText = p.caption;
+
+    card.appendChild(img);
+    card.appendChild(caption);
+    gallery.appendChild(card);
+  });
+
+  // Populate messages
+  const messagesContainer = document.getElementById('messages');
+  messages.forEach(msg => {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'message';
+    msgDiv.innerText = msg;
+    messagesContainer.appendChild(msgDiv);
+  });
+</script>
+
+</body>
+</html>
